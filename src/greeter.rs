@@ -18,12 +18,20 @@
  * along with wello-horld.rs. If not, see <https://www.gnu.org/licenses/>.
  */
 
-use crate::greeter::{Greet, Greeter};
+pub trait Greet {
+    fn salute(&self, name: &str) -> String;
+}
 
-mod greeter;
+pub struct Greeter();
 
-fn main() {
-    let morningstar = Greeter::new();
+impl Greeter {
+    pub fn new() -> Self {
+        Self()
+    }
+}
 
-    println!("{}", morningstar.salute("Detective"));
+impl Greet for Greeter {
+    fn salute(&self, name: &str) -> String {
+        format!("Hello, {}!", name)
+    }
 }
