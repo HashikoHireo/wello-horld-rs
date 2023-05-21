@@ -1,0 +1,11 @@
+[package]
+name = "wello-horld-rs"
+description = "A hello world app (with a twist) written in Rust"
+authors = ["Hashiko Hireo <HashikoHireo@proton.me>"]
+version = "1.0.0"
+edition = "2021"
+license = "AGPL-3.0-or-later"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
